@@ -1,171 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matthew Hajec - Developer Portfolio</title>
     <!-- This is a basic site, so Tailwind CSS is included via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script> 
-</head>
-<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
     <!-- Header -->
     <header class="bg-white shadow">
-        <div class="container mx-auto px-6 py-4">
-            <h1 class="text-3xl font-bold">Matthew Hajec</h1>
-            <h2 class="text-xl text-gray-600">Developer Portfolio</h2>
-        </div>
+      <div class="container mx-auto px-6 py-4">
+        <h1 class="text-3xl font-bold">Matthew Hajec</h1>
+        <h2 class="text-xl text-gray-600">Developer Portfolio</h2>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-8 flex-grow">
-        <!-- About Me Section -->
-        <section id="about" class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-            <p class="text-gray-700 leading-relaxed">
-                With a strong foundation in full-stack development and business analysis, 
-                I specialize in translating customer needs into scalable, optimized web 
-                solutions. Currently pursuing a degree in Information Technology, I’m 
-                passionate about continuously challenging myself and finding new ways to 
-                learn and grow as a developer. Skilled in languages like JavaScript, Python, 
-                and Elixir, I aim to deliver impactful results through efficient, 
-                well-structured solutions. Outside of work, I enjoy exploring cultures, 
-                staying active with rock climbing, and staying on top of the latest tech advancements            
+      <!-- About Me Section -->
+      <section id="about" class="my-8">
+        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+        <p class="text-gray-700 leading-relaxed">
+          With a strong foundation in full-stack development and business
+          analysis, I specialize in translating customer needs into scalable,
+          optimized web solutions. Currently pursuing a degree in Information
+          Technology, I’m passionate about continuously challenging myself and
+          finding new ways to learn and grow as a developer. Skilled in
+          languages like JavaScript, Python, and Elixir, I aim to deliver
+          impactful results through efficient, well-structured solutions.
+          Outside of work, I enjoy exploring cultures, staying active with rock
+          climbing, and staying on top of the latest tech advancements
+        </p>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="my-8">
+        <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center"
+        >
+          <div class="flex justify-center">
+            <img
+              src="./bisi.webp"
+              alt="BISI Solutions Logo"
+              class="h-36 w-auto object-contain"
+            />
+          </div>
+          <div class="md:col-span-3 lg:col-span-5 flex flex-col justify-center">
+            <h3 class="text-xl font-bold">BISI Solutions, LLC</h3>
+            <p class="text-gray-700">
+              Robins Air Force Base, Warner Robins, GA
             </p>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">Experience</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
-                <div class="flex justify-center">
-                    <img src="./bisi.webp" alt="BISI Solutions Logo" class="h-36 w-auto object-contain">
-                </div>
-                <div class="md:col-span-3 lg:col-span-5 flex flex-col justify-center">
-                    <h3 class="text-xl font-bold">BISI Solutions, LLC</h3>
-                    <p class="text-gray-700">Robins Air Force Base, Warner Robins, GA</p>
-                    <p class="text-gray-700">Business Analyst I</p>
-                    <p class="text-gray-700">October 2021 - January 2023</p>
-                    <ul class="list-disc list-inside text-gray-700 mt-2">
-                        <li>Interacted with internal customers to understand report requirements for aircraft maintenance operations</li>
-                        <li>Used extensive SQL standard and custom reports to provide insight into business performance</li>
-                        <li>Developed complex dashboard and reporting tools to track business performance metrics</li>
-                        <li>Updated and developed scripts and queries to extract and analyze data from multiple sources</li>
-                        <li>Collaborated with engineering and planning teams to track and plan aircraft maintenance operations</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2 class="text-2xl font-semibold mb-4">Education</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
-                <div class="flex justify-center">
-                    <img src="./mga.png" alt="Middle Georgia State University Logo" class="h-36 w-auto object-contain">
-                </div>
-                <div class="md:col-span-3  lg:col-span-5 flex flex-col justify-center">
-                    <h3 class="text-xl font-bold">Middle Georgia State University</h3>
-                    <p class="text-gray-700">Macon, Georgia</p>
-                    <p class="text-gray-700">Bachelor's of Science in Information Technology</p>
-                    <p class="text-gray-700">Expected Graduation in Fall 2025</p>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Projects Section -->
-        <section id="projects" class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project Card -->
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col">
-                    <h3 class="text-xl font-bold mb-2">ChessQuo</h3>
-                    <div class="w-full h-48 overflow-hidden rounded-lg mb-2">
-                        <img src="chess_quo.png" alt="Project Image" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-gray-700 mb-4">ChessQuo is an online chess game built with the Phoenix web framework. Players can create or join lobbies identified via a code. Real-time gameplay is powered by WebSockets and game state, lobby codes, and passwords are securely stored using Redis.</p>
-                 
-                    <div class="mt-auto flex flex-col">
-                        <a href="https://chessquo.com" target="_blank" class="text-blue-500 hover:underline mb-2">Go to Site</a>
-                        <a href="https://github.com/matthew-hajec/chess_quo" target="_blank" class="text-blue-500 hover:underline">View Code and README</a>
-                    </div>
-                </div>
-                <!-- Project Card -->
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col">
-                    <h3 class="text-xl font-bold mb-2">Cryptalyx</h3>
-                    <div class="w-full h-48 overflow-hidden rounded-lg mb-2">
-                        <img src="cryptalyx.png" alt="Project Image" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-gray-700 mb-4">Cryptalyx is a file-sharing platform built with a Node.js backend and React frontend. Users can sign up, upload files encrypted client-side using the Web Crypto API, and share them via unique links. Files are stored on Backblaze B2, and authentication is managed through Auth0.</p>
-
-                    <div class="mt-auto flex flex-col">
-                        <a href="https://cryptalyx.com" target="_blank" class="text-blue-500 hover:underline mb-2">Go to Site</a>
-                        <a href="https://github.com/matthew-hajec/veil_vault_frontend" target="_blank" class="text-blue-500 hover:underline">View Code and README</a>
-                    </div>
-                </div>
-                <!-- Project Card -->
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col">
-                    <h3 class="text-xl font-bold mb-2">Project Three</h3>
-                    <div class="w-full h-48 overflow-hidden rounded-lg mb-2">
-                        <img src="https://placehold.co/200x250" alt="Project Image" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt distinctio autem commodi tenetur optio quibusdam recusandae dolorem nihil, praesentium amet odit ut molestiae consectetur quaerat est consequuntur earum.</p>
-
-                    <div class="mt-auto flex flex-col">
-                        <a href="#" target="_blank" class="text-blue-500 hover:underline mb-2">Go to Site</a>
-                        <a href="#" target="_blank" class="text-blue-500 hover:underline">View Code and README</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Languages Section -->
-        <section id="languages" class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">Programming Languages, Frameworks, and Libraries</h2>
-            <ul class="list-disc list-inside text-gray-700 columns-sm">
-                <li>Elixir</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>Phoenix Web Framework</li>
-                <li>Node.JS</li>
-                <li>React</li>
-                <li>Tailwind CSS</li>
-                <li>SQL</li>
+            <p class="text-gray-700">Business Analyst I</p>
+            <p class="text-gray-700">October 2021 - January 2023</p>
+            <ul class="list-disc list-inside text-gray-700 mt-2">
+              <li>
+                Interacted with internal customers to understand report
+                requirements for aircraft maintenance operations
+              </li>
+              <li>
+                Used extensive SQL standard and custom reports to provide
+                insight into business performance
+              </li>
+              <li>
+                Developed complex dashboard and reporting tools to track
+                business performance metrics
+              </li>
+              <li>
+                Updated and developed scripts and queries to extract and analyze
+                data from multiple sources
+              </li>
+              <li>
+                Collaborated with engineering and planning teams to track and
+                plan aircraft maintenance operations
+              </li>
             </ul>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">Additional Skills</h2>
-            <ul class="list-disc list-inside text-gray-700 columns-sm">
-                <li>Web Development</li>
-                <li>MVC Architecture</li>
-                <li>RESTful APIs</li>
-                <li>WebSockets</li>
-                <li>RDBMS Systems</li>
-                <li>Redis</li>
-                <li>GIT Version Control System</li>
-                <li>Software Testing</li>
-                <li>Software Performance Optimization</li>
-                <li>Requirements Gathering</li>
-            </ul>
-        </section>
+      <!-- Education Section -->
+      <section id="education">
+        <h2 class="text-2xl font-semibold mb-4">Education</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center"
+        >
+          <div class="flex justify-center">
+            <img
+              src="./mga.png"
+              alt="Middle Georgia State University Logo"
+              class="h-36 w-auto object-contain"
+            />
+          </div>
+          <div class="md:col-span-3 lg:col-span-5 flex flex-col justify-center">
+            <h3 class="text-xl font-bold">Middle Georgia State University</h3>
+            <p class="text-gray-700">Macon, Georgia</p>
+            <p class="text-gray-700">
+              Bachelor's of Science in Information Technology
+            </p>
+            <p class="text-gray-700">Expected Graduation in Fall 2025</p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-            <p class="text-gray-700 mb-2">Email: <a href="mailto:matthajec@proton.me" target="_blank" class="text-blue-500 hover:underline">matthajec@proton.me</a></p>
-            <p class="text-gray-700">GitHub: <a href="https://github.com/matthew-hajec" target="_blank" class="text-blue-500 hover:underline">github.com/matthew-hajec</a></p>
-        </section>
+      <!-- Projects Section -->
+      <section id="projects" class="my-8">
+        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project Card -->
+          <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-bold mb-2">ChessQuo</h3>
+            <div class="w-full h-48 overflow-hidden rounded-lg mb-2">
+              <img
+                src="chess_quo.png"
+                alt="Project Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-700 mb-4">
+              ChessQuo is an online chess game built with the Phoenix web
+              framework. Players can create or join lobbies identified via a
+              code. Real-time gameplay is powered by WebSockets and game state,
+              lobby codes, and passwords are securely stored using Redis.
+            </p>
+
+            <div class="mt-auto flex flex-col">
+              <a
+                href="https://chessquo.com"
+                target="_blank"
+                class="text-blue-500 hover:underline mb-2"
+                >Go to Site</a
+              >
+              <a
+                href="https://github.com/matthew-hajec/chess_quo"
+                target="_blank"
+                class="text-blue-500 hover:underline"
+                >View Code and README</a
+              >
+            </div>
+          </div>
+          <!-- Project Card -->
+          <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-bold mb-2">Cryptalyx</h3>
+            <div class="w-full h-48 overflow-hidden rounded-lg mb-2">
+              <img
+                src="cryptalyx.png"
+                alt="Project Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-700 mb-4">
+              Cryptalyx is a file-sharing platform built with a Node.js backend
+              and React frontend. Users can sign up, upload files encrypted
+              client-side using the Web Crypto API, and share them via unique
+              links. Files are stored on Backblaze B2, and authentication is
+              managed through Auth0.
+            </p>
+
+            <div class="mt-auto flex flex-col">
+              <a
+                href="https://cryptalyx.com"
+                target="_blank"
+                class="text-blue-500 hover:underline mb-2"
+                >Go to Site</a
+              >
+              <a
+                href="https://github.com/matthew-hajec/veil_vault_frontend"
+                target="_blank"
+                class="text-blue-500 hover:underline"
+                >View Code and README</a
+              >
+            </div>
+          </div>
+          <!-- Project Card -->
+          <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-bold mb-2">Today I Will</h3>
+            <div class="w-full h-48 overflow-hidden rounded-lg mb-2">
+              <img
+                src="todayiwill.png"
+                alt="Project Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-700 mb-4">
+              Today I Will is a minimalist productivity tool designed to help
+              users focus on one task at a time. It featues a very simple
+              interface with a LoFi music option, and written with plain HTML,
+              CSS, and JavaScript. Tasks are persisted for 24 hours, ensuring
+              they remain after refreshes.
+            </p>
+
+            <div class="mt-auto flex flex-col">
+              <a
+                href="https://bangrew.com"
+                target="_blank"
+                class="text-blue-500 hover:underline mb-2"
+                >Go to Site</a
+              >
+              <a
+                href="#"
+                target="https://github.com/matthew-hajec/today-i-will"
+                class="text-blue-500 hover:underline"
+                >View Code and README</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Languages Section -->
+      <section id="languages" class="my-8">
+        <h2 class="text-2xl font-semibold mb-4">
+          Programming Languages, Frameworks, and Libraries
+        </h2>
+        <ul class="list-disc list-inside text-gray-700 columns-sm">
+          <li>Elixir</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>Phoenix Web Framework</li>
+          <li>Node.JS</li>
+          <li>React</li>
+          <li>Tailwind CSS</li>
+          <li>SQL</li>
+        </ul>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="my-8">
+        <h2 class="text-2xl font-semibold mb-4">Additional Skills</h2>
+        <ul class="list-disc list-inside text-gray-700 columns-sm">
+          <li>Web Development</li>
+          <li>MVC Architecture</li>
+          <li>RESTful APIs</li>
+          <li>WebSockets</li>
+          <li>RDBMS Systems</li>
+          <li>Redis</li>
+          <li>GIT Version Control System</li>
+          <li>Software Testing</li>
+          <li>Software Performance Optimization</li>
+          <li>Requirements Gathering</li>
+        </ul>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="my-8">
+        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+        <p class="text-gray-700 mb-2">
+          Email:
+          <a
+            href="mailto:matthajec@proton.me"
+            target="_blank"
+            class="text-blue-500 hover:underline"
+            >matthajec@proton.me</a
+          >
+        </p>
+        <p class="text-gray-700">
+          GitHub:
+          <a
+            href="https://github.com/matthew-hajec"
+            target="_blank"
+            class="text-blue-500 hover:underline"
+            >github.com/matthew-hajec</a
+          >
+        </p>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-white shadow mt-12">
-        <div class="container mx-auto px-6 py-4 text-center">
-            <p class="text-gray-700">&copy; 2024 Matthew Hajec. All rights reserved.</p>
-        </div>
+      <div class="container mx-auto px-6 py-4 text-center">
+        <p class="text-gray-700">
+          &copy; 2024 Matthew Hajec. All rights reserved.
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
