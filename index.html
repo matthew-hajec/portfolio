@@ -25,80 +25,10 @@
         <h2 class="text-2xl font-semibold mb-4">About Me</h2>
         <p class="text-gray-700 leading-relaxed">
           I’m currently studying Information Technology and working on web development projects-both frontend and backend.
-          I’m into building things that work, learning as I go, and figuring stuff out when it breaks. 
-          Outside of that, I’m into history, rock climbing, and keeping up with tech. 
+          I’m passionate about building things that work, learning as I go, and figuring stuff out when it breaks. 
+          Outside of that, I’m into history, rock climbing, and keeping up with advancements in technology. 
           This site’s a collection of what I’ve built so far.
         </p>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="my-8">
-        <h2 class="text-2xl font-semibold mb-4">Experience</h2>
-        <div
-          class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center"
-        >
-          <div class="flex justify-center">
-            <img
-              src="./bisi.webp"
-              alt="BISI Solutions Logo"
-              class="h-36 w-auto object-contain"
-            />
-          </div>
-          <div class="md:col-span-3 lg:col-span-5 flex flex-col justify-center">
-            <h3 class="text-xl font-bold">BISI Solutions, LLC</h3>
-            <p class="text-gray-700">
-              Robins Air Force Base, Warner Robins, GA
-            </p>
-            <p class="text-gray-700">Business Analyst I</p>
-            <p class="text-gray-700">October 2021 - January 2023</p>
-            <ul class="list-disc list-inside text-gray-700 mt-2">
-              <li>
-                Interacted with internal customers to understand report
-                requirements for aircraft maintenance operations
-              </li>
-              <li>
-                Used extensive SQL standard and custom reports to provide
-                insight into business performance
-              </li>
-              <li>
-                Developed complex dashboard and reporting tools to track
-                business performance metrics
-              </li>
-              <li>
-                Updated and developed scripts and queries to extract and analyze
-                data from multiple sources
-              </li>
-              <li>
-                Collaborated with engineering and planning teams to track and
-                plan aircraft maintenance operations
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section id="education">
-        <h2 class="text-2xl font-semibold mb-4">Education</h2>
-        <div
-          class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center"
-        >
-          <div class="flex justify-center">
-            <img
-              src="./mga.png"
-              alt="Middle Georgia State University Logo"
-              class="h-36 w-auto object-contain"
-            />
-          </div>
-          <div class="md:col-span-3 lg:col-span-5 flex flex-col justify-center">
-            <h3 class="text-xl font-bold">Middle Georgia State University</h3>
-            <p class="text-gray-700">Macon, Georgia</p>
-            <p class="text-gray-700">
-              Bachelor's of Science in Information Technology
-            </p>
-            <p class="text-gray-700">Expected Graduation in Fall 2025</p>
-          </div>
-        </div>
       </section>
 
       <!-- Projects Section -->
@@ -119,9 +49,8 @@
             </div>
             <p class="text-gray-700 mb-4">
               ChessQuo is an online chess game built with the Phoenix web
-              framework. Players can create or join lobbies identified via a
-              code. Use WebSockets for real-time gameplay and redis for state
-              management.
+              framework and the Redis in-memory database. Players can create or join lobbies identified via a
+              code. Uses a custom chess move engine and WebSockets for real-time communication between players and the server.
             </p>
 
             <div class="mt-auto flex flex-col">
@@ -151,9 +80,7 @@
             </div>
             <p class="text-gray-700 mb-4">
               Cryptalyx is a file-sharing platform built with a Node.js backend
-              and React frontend. Users can sign up, upload files encrypted
-              client-side using the Web Crypto API, and share them via unique
-              links. Files are stored on Backblaze B2, and authentication is
+              and React frontend. Users can sign up and share files which are encrypted using a PBKDF and AES-GCM on the client-side. Files are stored on Backblaze B2, and authentication is
               managed through Auth0.
             </p>
 
@@ -185,7 +112,7 @@
             <p class="text-gray-700 mb-4">
               Today I Will is a minimalist productivity tool designed to help
               users focus on one task at a time. It featues a very simple
-              interface with a LoFi music option, and written with vanilla HTML,
+              interface with a music option, and written with vanilla HTML,
               CSS, and JavaScript. Tasks are persisted temporarily in local storage.
             </p>
 
@@ -229,14 +156,84 @@
       <section id="skills" class="my-8">
         <h2 class="text-2xl font-semibold mb-4">Additional Skills</h2>
         <ul class="list-disc list-inside text-gray-700 columns-sm">
+          <li>Data Analytics and Presentation</li>
+          <li>Microsoft Office 365 Tools</li>
           <li>Web Development</li>
           <li>RESTful APIs</li>
           <li>WebSockets</li>
-          <li>Databases</li>
+          <li>Databases (SQL and non-SQL)</li>
           <li>GIT Version Control System</li>
           <li>Software Testing</li>
           <li>Requirements Gathering</li>
         </ul>
+      </section>
+
+      
+      <!-- Experience Section -->
+      <section id="experience" class="my-8">
+        <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center"
+        >
+          <div class="flex justify-center">
+            <img
+              src="./bisi.webp"
+              alt="BISI Solutions Logo"
+              class="h-36 w-auto object-contain"
+            />
+          </div>
+          <div class="md:col-span-3 lg:col-span-5 flex flex-col justify-center">
+            <h3 class="text-xl font-bold">BISI Solutions, LLC</h3>
+            <p class="text-gray-700">
+              Robins Air Force Base, Warner Robins, GA
+            </p>
+            <p class="text-gray-700">Business Analyst I</p>
+            <p class="text-gray-700">October 2021 - January 2023</p>
+            <ul class="list-disc list-inside text-gray-700 mt-2">
+              <li>
+                Used the CPM (critical path methods) to estimate project completion times
+                and provide data-driven reccomendations for planning
+              </li>
+              <li>
+                Refined CPM analysis to incorporate real-world constraints like part availability, timing of labor skills, and workspace limitations
+              </li>
+              <li>
+                Collaborated with internal stakeholders to gather and clarify reporting requirements
+              </li>
+              <li>
+                Used SQL and custom reports to analyze the performance of teams and projects
+              </li>
+              <li>
+                Developed and maintained scripts and spreadsheets to extract, clean, and analyze data across multiple systems
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education">
+        <h2 class="text-2xl font-semibold mb-4">Education</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center"
+        >
+          <div class="flex justify-center">
+            <img
+              src="./mga.png"
+              alt="Middle Georgia State University Logo"
+              class="h-36 w-auto object-contain"
+            />
+          </div>
+          <div class="md:col-span-3 lg:col-span-5 flex flex-col justify-center">
+            <h3 class="text-xl font-bold">Middle Georgia State University</h3>
+            <p class="text-gray-700">Macon, Georgia</p>
+            <p class="text-gray-700">
+              Bachelor's of Science in Information Technology
+            </p>
+            <p class="text-gray-700">Expected Graduation in Fall 2025</p>
+          </div>
+        </div>
       </section>
 
       <!-- Contact Section -->
