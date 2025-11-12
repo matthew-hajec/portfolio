@@ -22,7 +22,15 @@ export default function Stats() {
         <div className="text-gray-500 dark:text-gray-400">Loading...</div>
       ) : (null)}
       
-      <div style={{ display: isLoading ? 'none' : 'block' }} className="overflow-x-auto">
+      <div style={{ display: isLoading ? 'none' : 'block' }} 
+        className="
+        overflow-x-auto
+        p-6
+        bg-white 
+        rounded-lg
+        shadow-lg
+        "
+      >
         <GitHubCalendar />
       </div>
     </section>
