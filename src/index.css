@@ -1,3 +1,13 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --animate-gradient-pan: gradient-pan 6s ease infinite;
+
+  @keyframes gradient-pan {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+    50% { background-position: 100% center; }
+  }
+}

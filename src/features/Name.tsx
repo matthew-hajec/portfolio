@@ -1,0 +1,16 @@
+export default function NameFeature() {
+  return (
+    <div className="flex justify-center my-8">
+      <h1 
+        className="
+          text-5xl font-bold 
+          bg-gradient-to-r from-blue-500 via-purple-600 to-pink-400 
+          bg-clip-text text-transparent 
+          animate-gradient-pan"
+        style={{ backgroundSize: '200% 100%' }}
+      >
+        Matthew Hajec
+      </h1>
+    </div>
+  )
+}
