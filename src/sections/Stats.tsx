@@ -1,6 +1,7 @@
 import React from 'react';
 import GitHubCalendar from "../features/GitHubCalenedar";
 import Card from '../components/Card';
+import Text from '../components/typography/Text';
 
 export default function Stats() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -25,11 +26,11 @@ export default function Stats() {
 
         <div style={{ display: isLoading ? 'none' : 'block' }}>
           {/* Everything in this block is mounted on page load, but hidden until loading is complete */}
-          <h2 className='
-            font-bold underline text-2xl
-            text-gray-700 dark:text-gray-300
-            mb-4
-          '>GitHub Contributions</h2>
+
+
+          <Text elementType="h2" className="text-4xl font-bold mb-4">
+            Stats
+          </Text>
 
           <div className="
             overflow-x-auto

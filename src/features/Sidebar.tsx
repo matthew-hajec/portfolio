@@ -1,4 +1,5 @@
 import Card from "../components/Card";
+import Text from "../components/typography/Text";
 
 export default function Sidebar() {
   return (
@@ -7,16 +8,18 @@ export default function Sidebar() {
         <nav>
           <ul>
             <li className="mb-4">
-              <a href="#introduction" className="
-                text-gray-700 dark:text-gray-300 
-                hover:underline
-              ">Introduction</a>
+              <a href="#introduction">
+                <Text elementType="p" className="hover:underline font-bold">
+                  Introduction
+                </Text>
+              </a>
             </li>
             <li className="mb-4">
-              <a href="#stats" className="
-                text-gray-700 dark:text-gray-300 
-                hover:underline
-              ">Stats</a>
+              <a href="#stats">
+                <Text elementType="p" className="hover:underline font-bold">
+                  Stats
+                </Text>
+              </a>
             </li>
           </ul>
         </nav>
