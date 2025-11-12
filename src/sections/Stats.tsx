@@ -1,4 +1,4 @@
-import GitHubCalendar from "../features/GitHubCalnedar";
+import GitHubCalendar from "../features/GitHubCalenedar";
 
 export default function Stats() {
   return (
