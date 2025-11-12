@@ -7,7 +7,7 @@ import { Introduction } from './sections/Introduction'
 function App() {
   return (
       <div className="min-h-screen bg-gray-200 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto pt-8">
+        <div className="max-w-7xl mx-auto pt-12">
           <header className='relative'>
             <Name />
             <div className="absolute top-6 end-0">
@@ -15,12 +15,12 @@ function App() {
             </div>
           </header>
 
-          <div className='grid grid-cols-4 gap-4'>
+          <div className='grid grid-cols-4 gap-8'>
             <div className="col-span-1">
               <Sidebar />
             </div>
 
-            <main className="col-span-3 grid grid-cols 1">
+            <main className="col-span-3 grid grid-cols-1 gap-8">
               <Introduction />
               <Stats />
               
