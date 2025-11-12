@@ -14,6 +14,8 @@ export default function ThemeToggle() {
   }
 
   return (
-    <Toggle isChecked={isChecked} onChange={handleChange}>{isChecked ? "Dark Mode" : "Light Mode"}</Toggle>
+    <Toggle isChecked={isChecked} onChange={handleChange} selectable={false}>
+      {isChecked ? "Dark Mode" : "Light Mode"}
+    </Toggle>
   )
 }
