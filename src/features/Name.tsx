@@ -1,6 +1,6 @@
 export default function Name() {
   return (
-    <div className="flex justify-center my-8">
+    <div className="flex justify-center mb-8">
       <h1 
         className="
           text-6xl font-bold font-['Stack_Sans_Notch']
