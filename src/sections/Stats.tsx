@@ -1,5 +1,6 @@
 import React from 'react';
 import GitHubCalendar from "../features/GitHubCalenedar";
+import Card from '../components/Card';
 
 export default function Stats() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -17,22 +18,32 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="flex justify-center p-8">
-      {isLoading ? (
-        <div className="text-gray-500 dark:text-gray-400">Loading...</div>
-      ) : (null)}
-      
-      <div style={{ display: isLoading ? 'none' : 'block' }} 
-        className="
-        overflow-x-auto
-        p-6
-        bg-white 
-        rounded-lg
-        shadow-lg
-        "
-      >
-        <GitHubCalendar />
-      </div>
-    </section>
+    <Card>
+      <section className="flex justify-center">
+        {isLoading ? (
+          <div className="text-gray-500 dark:text-gray-400">Loading...</div>
+        ) : (null)}
+
+        <div style={{ display: isLoading ? 'none' : 'block' }}>
+          {/* Everything in this block is mounted on page load, but hidden until loading is complete */}
+          <h2 className='
+            font-bold underline text-2xl
+            text-gray-700 dark:text-gray-300
+            mb-4
+          '>GitHub Contributions</h2>
+
+          <div className="
+            overflow-x-auto
+            p-6
+            bg-white 
+            dark:rounded-lg
+            dark:shadow-lg
+            "
+          >
+            <GitHubCalendar />
+          </div>
+        </div>
+      </section>
+    </Card>
   )
 }
