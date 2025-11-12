@@ -8,7 +8,7 @@ function App() {
         <ThemeToggle></ThemeToggle>
         <Name></Name>
 
-        <main>
+        <main className="mx-auto px-4 mt-8">
           <Stats></Stats>
         </main>
 

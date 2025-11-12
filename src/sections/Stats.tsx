@@ -17,12 +17,12 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="flex justify-center my-8">
+    <section className="flex justify-center my-8 p-8 bg-gray-300">
       {isLoading ? (
         <div className="text-gray-500 dark:text-gray-400">Loading...</div>
       ) : (null)}
       
-      <div style={{ display: isLoading ? 'none' : 'block' }}>
+      <div style={{ display: isLoading ? 'none' : 'block' }} className="overflow-x-auto">
         <GitHubCalendar />
       </div>
     </section>
