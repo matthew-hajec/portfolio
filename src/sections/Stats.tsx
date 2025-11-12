@@ -17,7 +17,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="flex justify-center my-8 p-8 bg-gray-300">
+    <section className="flex justify-center p-8">
       {isLoading ? (
         <div className="text-gray-500 dark:text-gray-400">Loading...</div>
       ) : (null)}

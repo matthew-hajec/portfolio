@@ -5,18 +5,25 @@ import Sidebar from './features/Sidebar'
 
 function App() {
   return (
-      <div className="min-h-screen bg-white dark:bg-gray-900 flex">
-        <Sidebar></Sidebar>
+      <div className="min-h-screen bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <header>
+            <div className="flex justify-end">
+              <ThemeToggle />
+            </div>
+            <Name></Name>
+          </header>
 
-        <main className="px-4 mt-8 flex-1">
-          <div className="flex justify-end">
-            <ThemeToggle />
+          <div className='grid grid-cols-4 gap-4'>
+            <div className="col-span-1">
+              <Sidebar />
+            </div>
+
+            <main className="col-span-3">
+              <Stats />
+            </main>
           </div>
-          <Name></Name>
-
-          <Stats></Stats>
-        </main>
-
+        </div>
       </div>
   )
 }
