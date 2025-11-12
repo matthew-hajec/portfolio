@@ -1,4 +1,4 @@
-export default function NameFeature() {
+export default function Name() {
   return (
     <div className="flex justify-center my-8">
       <h1 
