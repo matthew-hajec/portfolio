@@ -11,3 +11,8 @@
     50% { background-position: 100% center; }
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
