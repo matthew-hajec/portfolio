@@ -2,6 +2,7 @@ import ThemeToggle from './features/ThemeToggle'
 import Name from './features/Name'
 import Stats from './sections/Stats'
 import Sidebar from './features/Sidebar'
+import { Introduction } from './sections/Introduction'
 
 function App() {
   return (
@@ -19,8 +20,10 @@ function App() {
               <Sidebar />
             </div>
 
-            <main className="col-span-3">
+            <main className="col-span-3 grid grid-cols 1 gap-4">
+              <Introduction />
               <Stats />
+              
             </main>
           </div>
         </div>

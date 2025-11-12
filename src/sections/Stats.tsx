@@ -7,9 +7,8 @@ export default function Stats() {
 
   React.useEffect(() => {
     // Unfortunately, GitHubCalendar doesn't provide any infomration about its loading state.
-    // Therefore, we use a simple timer and hope that the data loads within this time, not a great solution,
-    // but w
-    
+    // Therefore, we use a simple timer and hope that the data loads within this time.
+        
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
