@@ -23,7 +23,7 @@ function App() {
           <div className="absolute -bottom-1/2 left-1/4 h-3/4 w-3/4 rounded-full bg-pink-600/15 blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto pt-12">
+        <div className="max-w-7xl mx-auto pt-12 px-6">
           <header className='relative'>
             <Name />
             <div className="absolute top-6 end-0">
@@ -31,12 +31,17 @@ function App() {
             </div>
           </header>
 
-          <div className='grid grid-cols-4 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-4 gap-x-8 gap-y-10'>
             <div className="col-span-1">
               <Sidebar />
             </div>
 
-            <main className="col-span-3 grid grid-cols-1 gap-8">
+            <main className="
+              col-span-1
+              lg:col-span-4
+              xl:col-span-3
+              grid grid-cols-1 gap-y-10
+            ">
               <Introduction />
               <Projects />
               <Stats />

@@ -10,7 +10,8 @@ export default function Projects() {
       </Text>
 
       <div className="
-        grid grid-cols-3 gap-4
+        grid grid-cols-1 gap-4
+        md:grid-cols-3
       ">
         <Project
           title="ChessQuo"
