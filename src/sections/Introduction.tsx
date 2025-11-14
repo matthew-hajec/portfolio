@@ -9,7 +9,11 @@ export default function Introduction() {
       <Text elementType="h2" className="text-3xl font-semibold mb-4">
         Introduction
       </Text>
-      <Text>Hello, My name is Matthew</Text>
+      <Card padded={false} additionalClasses="p-4">
+      <Text>
+        Hello! I'm Matthew Hajec, a software developer specializing in building web applications with a focus on Elixir and JavaScript/TypeScript. I enjoy creating efficient, scalable, and user-friendly solutions.
+      </Text>
+      </Card>
     </Card>
     </>
   )

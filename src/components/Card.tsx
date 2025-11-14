@@ -6,14 +6,14 @@ type CardProps = {
 
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export default function Card({ children, hoverEffect, padded=true, additionalClasses='', ...props }: CardProps) {
+export default function Card({ children, hoverEffect=true, padded=true, additionalClasses='', ...props }: CardProps) {
   return (
     <div className={`
       w-full
       ${padded ? 'p-8' : ''}
       ${hoverEffect ? `
         hover:bg-white/25 hover:shadow-white/30
-        dark:hover:bg-gray-800/60 dark:hover:shadow-black/30
+        dark:hover:bg-gray-800/50 dark:hover:shadow-black/30
 
         transition-all ease-in-out duration-500
         ` : ''}
@@ -23,7 +23,8 @@ export default function Card({ children, hoverEffect, padded=true, additionalCla
       bg-white/20 dark:bg-gray-800/40
       backdrop-blur-xl
       ${additionalClasses}
-    `} {...props}>
+    `} 
+    {...props}>
       {children}
     </div>
   )
