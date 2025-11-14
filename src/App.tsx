@@ -23,7 +23,7 @@ function App() {
           <div className="absolute -bottom-1/2 left-1/4 h-3/4 w-3/4 rounded-full bg-pink-600/15 blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto py-12 px-6">
+        <div className="max-w-7xl mx-auto pt-12 pb-6 px-6">
           <header className='relative'>
             <Name />
             <div className="absolute top-6 end-0">
