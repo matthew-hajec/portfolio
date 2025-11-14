@@ -29,7 +29,7 @@ export default function Stats() {
 
 
           <Text elementType="h2" className="text-4xl font-semibold mb-8">
-            Stats
+            Statistics
           </Text>
 
           <Card>
