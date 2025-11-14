@@ -13,20 +13,21 @@ export default function Toggle({isChecked, onChange, children, selectable = true
       <input type="checkbox" checked={isChecked} onChange={e => onChange(e.target.checked)} className="sr-only peer"></input>
       <div className="
         relative w-13 h-7
-        bg-white/50 dark:bg-gray-700/50
-        dark:border-gray-600
-        shadow-lg
-        shadow-white/12 dark:shadow-black/20
+        bg-white/20
+        border border-white/20 dark:border-blue-600/30
+        shadow-sm shadow-white/30 dark:shadow-blue-600/30
+
         rounded-full 
 
         peer 
         peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800
-        peer-checked:bg-blue-600/50
+        peer-checked:bg-blue-700/70
         peer-checked:after:start-7 rtl:peer-checked:after:-translate-x-full after:content-[''] 
         
 
         after:absolute
-        after:bg-white/80 dawgdark:after:bg-white/50
+        after:bg-white/80 dark:after:bg-gray-800/40
+        dark:after:border dark:after:border-gray-800/40
         after:top-1 after:start-1 after:rounded-full after:h-5 after:w-5 after:transition-all 
         
        "></div>

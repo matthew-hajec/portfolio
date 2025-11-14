@@ -28,7 +28,7 @@ export default function Stats() {
           {/* Everything in this block is mounted on page load, but hidden until loading is complete */}
 
 
-          <Text elementType="h2" className="text-4xl font-bold mb-4">
+          <Text elementType="h2" className="text-4xl font-semibold mb-4">
             Stats
           </Text>
 
