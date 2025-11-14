@@ -4,6 +4,7 @@ import Stats from './sections/Stats'
 import Sidebar from './features/Sidebar'
 import Introduction from './sections/Introduction'
 import Projects from './sections/Projects'
+import Skills from './sections/Skills'
 
 function App() {
   return (
@@ -49,7 +50,9 @@ function App() {
             ">
               <Introduction />
               <Projects />
+              <Skills />
               <Stats />
+              
               
             </main>
           </div>
