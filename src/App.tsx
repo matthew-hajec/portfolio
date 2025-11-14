@@ -2,7 +2,7 @@ import ThemeToggle from './features/ThemeToggle'
 import Name from './features/Name'
 import Stats from './sections/Stats'
 import Sidebar from './features/Sidebar'
-import { Introduction } from './sections/Introduction'
+import Introduction from './sections/Introduction'
 
 function App() {
   return (
