@@ -1,16 +1,16 @@
 type CardProps = {
   children: React.ReactNode
   hoverEffect?: boolean
-  paddingSize?: number
+  padded?: boolean
   additionalClasses?: string
 
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export default function Card({ children, hoverEffect, paddingSize=8, additionalClasses='', ...props }: CardProps) {
+export default function Card({ children, hoverEffect, padded=true, additionalClasses='', ...props }: CardProps) {
   return (
     <div className={`
       w-full
-      p-${paddingSize}
+      ${padded ? 'p-8' : ''}
       ${hoverEffect ? `
         hover:bg-white/25 hover:shadow-white/30
         dark:hover:bg-gray-800/60 dark:hover:shadow-black/30

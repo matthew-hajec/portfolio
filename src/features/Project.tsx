@@ -16,7 +16,7 @@ type ProjectProps = {
 export default function Project(props: ProjectProps) {
 
   return (
-    <Card hoverEffect paddingSize={6} additionalClasses="flex flex-col justify-between">
+    <Card hoverEffect padded={false} additionalClasses="flex flex-col justify-between p-6">
       <div className="mb-4">
         <Text elementType="h3" className="text-2xl font-medium mb-2">
           {props.title}
