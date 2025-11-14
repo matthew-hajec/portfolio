@@ -24,7 +24,7 @@ export default function Stats() {
           <div className="text-gray-500 dark:text-gray-400">Loading...</div>
         ) : (null)}
 
-        <div style={{ display: isLoading ? 'none' : 'block' }}>
+        <div className="w-full" style={{ display: isLoading ? 'none' : 'block' }}>
           {/* Everything in this block is mounted on page load, but hidden until loading is complete */}
 
 
@@ -33,7 +33,8 @@ export default function Stats() {
           </Text>
 
           <div className="
-            overflow-x-auto
+            w-full max-w-full
+            overflow-x-scroll
             p-6
             bg-white 
             dark:rounded-lg
