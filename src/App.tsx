@@ -10,7 +10,7 @@ function App() {
         relative 
         min-h-screen
         bg-[linear-gradient(72deg,rgba(255,255,255,1)_0%,rgba(148,191,255,1)_30%,rgba(129,187,120,1)_54%,rgba(217,174,100,1)_83%,rgba(255,255,255,1)_100%)]
-                dark:bg-[linear-gradient(72deg,rgba(17,24,39,1)_0%,rgba(75,85,101,1)_30%,rgba(79,70,229,1)_100%)]
+        dark:bg-[linear-gradient(72deg,rgba(17,24,39,1)_0%,rgba(65,85,101,1)_30%,rgba(79,70,229,1)_100%)]
       ">
         {/* Background Circles */}
         <div className='
