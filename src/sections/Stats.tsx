@@ -28,21 +28,15 @@ export default function Stats() {
           {/* Everything in this block is mounted on page load, but hidden until loading is complete */}
 
 
-          <Text elementType="h2" className="text-4xl font-semibold mb-4">
+          <Text elementType="h2" className="text-4xl font-semibold mb-8">
             Stats
           </Text>
 
-          <div className="
-            w-full max-w-full
-            overflow-x-scroll
-            p-6
-            bg-white 
-            dark:rounded-lg
-            dark:shadow-lg
-            "
-          >
-            <GitHubCalendar />
-          </div>
+          <Card>
+            <div className='dark:text-white opacity-80'>
+              <GitHubCalendar />
+            </div>
+          </Card>
         </div>
       </section>
     </Card>
