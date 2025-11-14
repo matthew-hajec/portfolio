@@ -3,6 +3,7 @@ import Name from './features/Name'
 import Stats from './sections/Stats'
 import Sidebar from './features/Sidebar'
 import Introduction from './sections/Introduction'
+import Projects from './sections/Projects'
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
 
             <main className="col-span-3 grid grid-cols-1 gap-8">
               <Introduction />
+              <Projects />
               <Stats />
               
             </main>

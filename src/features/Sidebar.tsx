@@ -15,9 +15,16 @@ export default function Sidebar() {
               </a>
             </li>
             <li className="mb-4">
+              <a href="#projects">
+                <Text elementType="p" className="hover:underline font-bold">
+                  Projects
+                </Text>
+              </a>
+            </li>
+            <li className="mb-4">
               <a href="#stats">
                 <Text elementType="p" className="hover:underline font-bold">
-                  Stats
+                  Statistics
                 </Text>
               </a>
             </li>

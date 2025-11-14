@@ -18,27 +18,25 @@ export default function Stats() {
   }, []);
 
   return (
-    <Card>
-      <section className="flex justify-center">
-        {isLoading ? (
-          <div className="text-gray-500 dark:text-gray-400">Loading...</div>
-        ) : (null)}
+    <Card id="stats">
+      {isLoading ? (
+        <div className="text-gray-500 dark:text-gray-400">Loading...</div>
+      ) : (null)}
 
-        <div className="w-full" style={{ display: isLoading ? 'none' : 'block' }}>
-          {/* Everything in this block is mounted on page load, but hidden until loading is complete */}
+      <div className="w-full" style={{ display: isLoading ? 'none' : 'block' }}>
+        {/* Everything in this block is mounted on page load, but hidden until loading is complete */}
 
 
-          <Text elementType="h2" className="text-4xl font-semibold mb-8">
-            Statistics
-          </Text>
+        <Text elementType="h2" className="text-4xl font-semibold mb-8">
+          Statistics
+        </Text>
 
-          <Card>
-            <div className='dark:text-white opacity-80'>
-              <GitHubCalendar />
-            </div>
-          </Card>
-        </div>
-      </section>
+        <Card>
+          <div className='dark:text-white opacity-80'>
+            <GitHubCalendar />
+          </div>
+        </Card>
+      </div>
     </Card>
   )
 }
