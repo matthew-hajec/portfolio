@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Toggle from "../components/Toggle";
 
 export default function ThemeToggle() {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(true);
 
   const handleChange = (checked: boolean) => {
     if (checked) {
@@ -12,6 +12,10 @@ export default function ThemeToggle() {
     }
     setIsChecked(checked);
   }
+
+  useEffect(() => {
+    handleChange(true);
+  }, []);
 
   return (
     <Toggle isChecked={isChecked} onChange={handleChange} selectable={false}>
