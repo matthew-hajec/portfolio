@@ -5,7 +5,7 @@ import Project from "../features/Project";
 export default function Projects() {
   return (
     <Card id="projects">
-      <Text elementType="h2" className="text-4xl font-semibold mb-8">
+      <Text elementType="h2" className="text-3xl font-semibold mb-8">
         Projects
       </Text>
 
