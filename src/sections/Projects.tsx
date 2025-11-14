@@ -1,6 +1,8 @@
 import Card from "../components/Card";
 import Text from "../components/typography/Text";
 import Project from "../features/Project";
+import chessQuoScreenshot from "../assets/chessquo.png";
+import cragForecastScreenshot from "../assets/cragforecast.png";
 
 export default function Projects() {
   return (
@@ -18,12 +20,14 @@ export default function Projects() {
           description="ChessQuo is an online, real-time multiplayer Chess application built with the Phoenix Web Framework (including LiveView) and TailwindCSS."
           githubUrl="https://github.com/matthew-hajec/chess-quo"
           liveUrl="https://chessquo.com"
+          imageSrc={chessQuoScreenshot}
         />
         <Project
           title="CragForecast"
           description="CragForecast helps rock climbers by making it easy to compare weather information for nearby climbing areas. Built with React, TailwindCSS, and Elixir."
           githubUrl="https://github.com/matthew-hajec/crag-forecast-api"
           liveUrl="https://cragforecast.com"
+          imageSrc={cragForecastScreenshot}
         />
         <Project
           title="Project Three"
