@@ -1,4 +1,5 @@
 import Card from "../components/Card";
+import Icon from "../components/Icon";
 import Text from "../components/typography/Text";
 
 // External links should start with "http" to ensure the open in a new tab.
@@ -20,7 +21,6 @@ function LinkItem({ href, children }: { href: string; children: React.ReactNode 
           hover:scale-101
           transition-all ease-in-out duration-200
           shadow-md shadow-gray-500/10
-
         ">
           <Text elementType="p">
             {children}
@@ -35,7 +35,7 @@ export default function Sidebar() {
   return (
     <div className="lg:sticky lg:top-6  lg:h-[calc(100vh-3rem)]">
       <Card padded={false} additionalClasses="h-full p-6">
-        <aside className="w-full">
+        <aside className="w-full flex flex-col justify-between h-full">
           <nav>
             <ul className="flex flex-col gap-4">
               <LinkItem href="#introduction">Introduction</LinkItem>
@@ -47,7 +47,22 @@ export default function Sidebar() {
           </nav>
           <nav>
             <ul className="flex flex-col gap-4 mt-8">
-
+              <a 
+                href="https://github.com/matthew-hajec" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center mb-8"
+              >
+                <Icon iconName="github" className="h-20" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/matthew-hajec/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <Icon iconName="linkedin" className="h-20" />
+              </a>
             </ul>
           </nav>
         </aside>
