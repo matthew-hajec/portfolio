@@ -46,12 +46,14 @@ export default function Sidebar() {
             </ul>
           </nav>
           <nav>
-            <ul className="flex flex-col gap-4 mt-8">
+            <ul className="
+              flex flex-col gap-4 flex-1
+              justify-end items-center">
               <a 
                 href="https://github.com/matthew-hajec" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center justify-center mb-8"
+                className="flex items-center justify-center mb-10"
               >
                 <Icon iconName="github" className="h-20" />
               </a>
@@ -59,7 +61,7 @@ export default function Sidebar() {
                 href="https://www.linkedin.com/in/matthew-hajec/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center"
+                className="flex items-center justify-center mb-4"
               >
                 <Icon iconName="linkedin" className="h-20" />
               </a>
