@@ -3,16 +3,17 @@ import openInNewBlack from '../assets/open-in-new.svg'
 import githubWhite from '../assets/github-mark-white.svg'
 import githubBlack from '../assets/github-mark.svg'
 
-type GenericIcons = 'open-as'
-type WebsiteIcons = 'github'
-type AllIcons = GenericIcons | WebsiteIcons
+type GenericIcon = 'open-as'
+type WebsiteIcon = 'github' | 'linkedin'
+type DevIcon = 'html5' | 'css3' | 'javascript' | 'typescript' | 'nodejs' | 'react' | 'tailwindcss' | 'phoenix' | 'elixir' | 'sql' | 'git' | 'docker'
+export type IconName = GenericIcon | WebsiteIcon | DevIcon
 
 type IconProps = {
-  iconName: AllIcons;
+  iconName: IconName;
   className?: string;
 };
 
-const iconMap: Record<AllIcons, { light: string; dark: string; alt: string }> = {
+const iconMap: Record<IconName, { light: string; dark: string; alt: string }> = {
   'open-as': {
     light: openInNewBlack,
     dark: openInNewWhite,
@@ -22,6 +23,71 @@ const iconMap: Record<AllIcons, { light: string; dark: string; alt: string }> = 
     light: githubBlack,
     dark: githubWhite,
     alt: 'GitHub icon',
+  },
+  'linkedin': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg',
+    alt: 'LinkedIn icon',
+  },
+  'html5': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg',
+    alt: 'HTML5 icon',
+  },
+  'css3': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg',
+    alt: 'CSS3 icon',
+  },
+  'javascript': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
+    alt: 'JavaScript icon',
+  },
+  'typescript': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
+    alt: 'TypeScript icon',
+  },
+  'nodejs': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg',
+    alt: 'Node.js icon',
+  },
+  'react': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
+    alt: 'React icon',
+  },
+  'tailwindcss': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg',
+    alt: 'Tailwind CSS icon',
+  },
+  'phoenix': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/phoenix/phoenix-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/phoenix/phoenix-original.svg',
+    alt: 'Phoenix Framework icon',
+  },
+  'elixir': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elixir/elixir-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elixir/elixir-original.svg',
+    alt: 'Elixir icon',
+  },
+  'sql': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
+    alt: 'SQL icon',
+  },
+  'git': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
+    alt: 'Git icon',
+  },
+  'docker': {
+    light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
+    dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
+    alt: 'Docker icon',
   },
 }
 
