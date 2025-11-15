@@ -3,6 +3,7 @@ import Text from "../components/typography/Text";
 import Project from "../features/Project";
 import chessQuoScreenshot from "../assets/chessquo.png";
 import cragForecastScreenshot from "../assets/cragforecast.png";
+import todayIWillScreenshot from "../assets/todayiwill.png";
 
 export default function Projects() {
   return (
@@ -33,7 +34,10 @@ export default function Projects() {
         />
         <Project
           title="Project Three"
-          description="Description of project three."
+          description="Today I Will is a minimalist productivity tool designed to help users focus on one task at a time. It featues a very simple interface with a music option, and written with vanilla HTML, CSS, and JavaScript."
+          githubUrl="https://github.com/velocityforge/today-i-will"
+          liveUrl="https://bangrew.com"
+          imageSrc={todayIWillScreenshot}
         />
       </div>
     </Card>

@@ -22,7 +22,7 @@ export default function Project(props: ProjectProps) {
         {props.imageSrc && (
           <img 
             src={props.imageSrc} alt={`${props.title} screenshot`} 
-            className="mb-4 rounded-lg h-36 w-full object-cover border border-gray-200 dark:border-gray-700" 
+            className="mb-4 rounded-lg h-44 w-full object-cover border border-gray-200 dark:border-gray-700" 
           />
         )}
         <Text className="text-sm">
