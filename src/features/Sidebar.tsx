@@ -1,11 +1,15 @@
 import Card from "../components/Card";
 import Text from "../components/typography/Text";
 
+// External links should start with "http" to ensure the open in a new tab.
 function LinkItem({ href, children }: { href: string; children: React.ReactNode }) {
+  const isExternal = href.startsWith('http');
+
   return (
     <li>
       <a 
-        href={href}>
+        href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
+        
         <div className="
           p-2
           text-center
@@ -39,6 +43,12 @@ export default function Sidebar() {
               <LinkItem href="#skills">Skills</LinkItem>
               <LinkItem href="#stats">Statistics</LinkItem>
             
+            </ul>
+          </nav>
+          <nav>
+            <ul className="flex flex-col gap-4 mt-8">
+              <LinkItem href="https://linkedin.com/in/matthew-hajec" >LinkedIn</LinkItem>
+              <LinkItem href="https://github.com/matthew-hajec">GitHub</LinkItem>
             </ul>
           </nav>
         </aside>
