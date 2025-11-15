@@ -36,7 +36,9 @@ export default function Sidebar() {
             <ul className="flex flex-col gap-4">
               <LinkItem href="#introduction">Introduction</LinkItem>
               <LinkItem href="#projects">Projects</LinkItem>
-              <LinkItem href="#stats">Stats</LinkItem>
+              <LinkItem href="#skills">Skills</LinkItem>
+              <LinkItem href="#stats">Statistics</LinkItem>
+            
             </ul>
           </nav>
         </aside>
