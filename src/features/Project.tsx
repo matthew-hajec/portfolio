@@ -1,10 +1,11 @@
 import Card from "../components/Card"
 import Text from "../components/typography/Text"
-import ThemedImage from "../components/ThemedImage"
+import ThemedImage from "../components/Icon"
 import blackGithubLogo from '../assets/github-mark.svg'
 import whiteGithubLogo from '../assets/github-mark-white.svg'
 import blackOpenInNew from '../assets/open-in-new.svg'
 import whiteOpenInNew from '../assets/open-in-new-white.svg'
+import Icon from "../components/Icon"
 
 
 type ProjectProps = {
@@ -36,11 +37,11 @@ export default function Project(props: ProjectProps) {
       <div className="flex justify-around">
         <a href={props.liveUrl} target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
           <div className="sr-only">Live Project</div>
-          <ThemedImage lightSrc={blackOpenInNew} darkSrc={whiteOpenInNew} alt="Open in new tab icon" className="h-9 w-9 mt-4" />
+          <Icon iconName="open-as" className="h-9 w-9 mt-4" />
         </a>
         <a href={props.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
           <div className="sr-only">GitHub Repository</div>
-          <ThemedImage lightSrc={blackGithubLogo} darkSrc={whiteGithubLogo} alt="GitHub Logo" className="h-8 w-8 mt-4" />
+          <Icon iconName="github" className="h-8 w-8 mt-4" />
         </a>
       </div>
     </Card>

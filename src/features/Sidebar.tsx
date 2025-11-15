@@ -1,5 +1,8 @@
 import Card from "../components/Card";
+import ThemedImage from "../components/Icon";
 import Text from "../components/typography/Text";
+import blackGithubLogo from '../assets/github-mark.svg'
+import whiteGithubLogo from '../assets/github-mark-white.svg'
 
 // External links should start with "http" to ensure the open in a new tab.
 function LinkItem({ href, children }: { href: string; children: React.ReactNode }) {
@@ -47,8 +50,7 @@ export default function Sidebar() {
           </nav>
           <nav>
             <ul className="flex flex-col gap-4 mt-8">
-              <LinkItem href="https://linkedin.com/in/matthew-hajec" >LinkedIn</LinkItem>
-              <LinkItem href="https://github.com/matthew-hajec">GitHub</LinkItem>
+
             </ul>
           </nav>
         </aside>
