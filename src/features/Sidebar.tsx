@@ -41,6 +41,7 @@ export default function Sidebar() {
               <LinkItem href="#introduction">Introduction</LinkItem>
               <LinkItem href="#projects">Projects</LinkItem>
               <LinkItem href="#skills">Skills</LinkItem>
+              <LinkItem href="#education">Education</LinkItem>
               <LinkItem href="#stats">Statistics</LinkItem>
             
             </ul>

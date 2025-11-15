@@ -5,6 +5,7 @@ import Sidebar from './features/Sidebar'
 import Introduction from './sections/Introduction'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
+import Education from './sections/Education'
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
               <Introduction />
               <Projects />
               <Skills />
+              <Education />
               <Stats />
               
               
