@@ -1,3 +1,6 @@
+import React from "react";
+import MouseFollowingDiv from "./MouseFollowingDiv";
+
 type CardProps = {
   children: React.ReactNode
   hoverEffect?: boolean
@@ -7,8 +10,10 @@ type CardProps = {
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export default function Card({ children, hoverEffect=true, padded=true, additionalClasses='', ...props }: CardProps) {
+  const parentRef = React.useRef<HTMLDivElement>(null);
+
   return (
-    <div className={`
+    <div ref={parentRef} className={`
       w-full
       ${padded ? 'p-8' : ''}
       ${hoverEffect ? `
@@ -22,9 +27,11 @@ export default function Card({ children, hoverEffect=true, padded=true, addition
       border border-white/20 dark:border-gray-700
       bg-white/20 dark:bg-gray-800/40
       backdrop-blur-xl
+      overflow-hidden
       ${additionalClasses}
     `} 
     {...props}>
+      <MouseFollowingDiv parentRef={parentRef} />
       {children}
     </div>
   )
