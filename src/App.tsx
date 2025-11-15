@@ -7,8 +7,13 @@ import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import Education from './sections/Education'
 import Experience from './sections/Experience'
+import React from 'react'
 
 function App() {
+  React.useEffect(() => {
+    console.log("Welcome to my portfolio! Feel free to explore the code and please reach out if you have any questions!");
+  }, []);
+
   return (
       <div className="
         relative 
