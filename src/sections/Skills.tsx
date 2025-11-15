@@ -6,7 +6,7 @@ function SkillItem({ skill, iconName }: { skill: string, iconName: IconName }) {
   return (
     <li className="
       flex flex-col items-center 
-      hover:scale-105 transition-transform duration-300 
+      hover:scale-110 transition-transform duration-150 
       p-4
     ">
       <Icon iconName={iconName} className="h-12 w-12 mb-2"/>
