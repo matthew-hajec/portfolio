@@ -7,9 +7,10 @@ type Coordinates = {
 
 type MouseFollowingDivProps = {
   parentRef: React.RefObject<HTMLDivElement | null>
+  className?: string
 }
 
-export default function MouseFollowingDiv({ parentRef }: MouseFollowingDivProps) {
+export default function MouseFollowingDiv({ parentRef, className }: MouseFollowingDivProps) {
   const [position, setPosition] = React.useState<Coordinates>({ x: 0, y: 0 })
   React.useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -30,14 +31,7 @@ export default function MouseFollowingDiv({ parentRef }: MouseFollowingDivProps)
 
   return (
     <div className='fixed top-0 bottom-0 left-0 right-0 pointer-events-none'>
-          <div style={{ left: position.x, top: position.y, position: 'absolute', transform: `translate(-50%, -50%)` }} className='
-            w-700 h-700
-            bg-[radial-gradient(circle,rgba(0,0,0,0.05)_0%,rgba(0,0,0,0)_60%)]
-            rounded-full
-            mix-blend-multiply
-            blur-2xl
-            animate-all
-          '>
+          <div style={{ left: position.x, top: position.y, position: 'absolute', transform: `translate(-50%, -50%)` }} className={className}>
           </div>
     </div>
   ) 

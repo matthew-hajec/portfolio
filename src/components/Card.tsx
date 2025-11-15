@@ -31,8 +31,16 @@ export default function Card({ children, hoverEffect=true, padded=true, addition
       ${additionalClasses}
     `} 
     {...props}>
-      <MouseFollowingDiv parentRef={parentRef} />
+      <MouseFollowingDiv parentRef={parentRef} className="
+        w-700 h-700
+        bg-[radial-gradient(circle,rgba(0,0,0,0.05)_0%,rgba(0,0,0,0)_60%)]
+        rounded-full
+        mix-blend-multiply
+        blur-2xl
+        animate-all
+      " />
       {children}
     </div>
   )
+
 }
