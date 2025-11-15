@@ -1,8 +1,5 @@
 import Card from "../components/Card";
-import ThemedImage from "../components/Icon";
 import Text from "../components/typography/Text";
-import blackGithubLogo from '../assets/github-mark.svg'
-import whiteGithubLogo from '../assets/github-mark-white.svg'
 
 // External links should start with "http" to ensure the open in a new tab.
 function LinkItem({ href, children }: { href: string; children: React.ReactNode }) {

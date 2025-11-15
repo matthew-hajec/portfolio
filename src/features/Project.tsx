@@ -1,10 +1,5 @@
 import Card from "../components/Card"
 import Text from "../components/typography/Text"
-import ThemedImage from "../components/Icon"
-import blackGithubLogo from '../assets/github-mark.svg'
-import whiteGithubLogo from '../assets/github-mark-white.svg'
-import blackOpenInNew from '../assets/open-in-new.svg'
-import whiteOpenInNew from '../assets/open-in-new-white.svg'
 import Icon from "../components/Icon"
 
 
