@@ -2,11 +2,13 @@ import openInNewWhite from '../assets/open-in-new-white.svg'
 import openInNewBlack from '../assets/open-in-new.svg'
 import githubWhite from '../assets/github-mark-white.svg'
 import githubBlack from '../assets/github-mark.svg'
+import mga from '../assets/mga.png'
 
 type GenericIcon = 'open-as'
 type WebsiteIcon = 'github' | 'linkedin'
 type DevIcon = 'html5' | 'css3' | 'javascript' | 'typescript' | 'nodejs' | 'react' | 'tailwindcss' | 'phoenix' | 'elixir' | 'sql' | 'git' | 'docker'
-export type IconName = GenericIcon | WebsiteIcon | DevIcon
+type PersonalIcon = 'mga'
+export type IconName = GenericIcon | WebsiteIcon | DevIcon | PersonalIcon
 
 type IconProps = {
   iconName: IconName;
@@ -88,6 +90,11 @@ const iconMap: Record<IconName, { light: string; dark: string; alt: string }> = 
     light: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
     dark: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
     alt: 'Docker icon',
+  },
+  'mga': {
+    light: mga,
+    dark: mga,
+    alt: 'Matthew Hajec Gaming Apparel logo',
   },
 }
 
