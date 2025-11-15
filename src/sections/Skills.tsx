@@ -23,7 +23,7 @@ export default function Skills() {
       <Text elementType="h2" className="text-3xl font-semibold mb-4">
         Skills
       </Text>
-      <ul className="grid grid-cols-3 gap-4">
+      <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         <SkillItem skill="HTML5" imageUrl="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
         <SkillItem skill="CSS3" imageUrl="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
         <SkillItem skill="JavaScript" imageUrl="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" />
