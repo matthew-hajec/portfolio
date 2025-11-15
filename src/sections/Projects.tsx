@@ -33,7 +33,7 @@ export default function Projects() {
           imageSrc={cragForecastScreenshot}
         />
         <Project
-          title="Project Three"
+          title="Today I Will"
           description="Today I Will is a minimalist productivity tool designed to help users focus on one task at a time. It featues a very simple interface with a music option, and written with vanilla HTML, CSS, and JavaScript."
           githubUrl="https://github.com/velocityforge/today-i-will"
           liveUrl="https://bangrew.com"
