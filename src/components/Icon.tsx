@@ -3,11 +3,12 @@ import openInNewBlack from '../assets/open-in-new.svg'
 import githubWhite from '../assets/github-mark-white.svg'
 import githubBlack from '../assets/github-mark.svg'
 import mga from '../assets/mga.png'
+import bisi from '../assets/bisi.webp'
 
 type GenericIcon = 'open-as'
 type WebsiteIcon = 'github' | 'linkedin'
 type DevIcon = 'html5' | 'css3' | 'javascript' | 'typescript' | 'nodejs' | 'react' | 'tailwindcss' | 'phoenix' | 'elixir' | 'sql' | 'git' | 'docker'
-type PersonalIcon = 'mga'
+type PersonalIcon = 'mga' | 'bisi'
 export type IconName = GenericIcon | WebsiteIcon | DevIcon | PersonalIcon
 
 type IconProps = {
@@ -95,6 +96,11 @@ const iconMap: Record<IconName, { light: string; dark: string; alt: string }> = 
     light: mga,
     dark: mga,
     alt: 'Matthew Hajec Gaming Apparel logo',
+  },
+  'bisi': {
+    light: bisi,
+    dark: bisi,
+    alt: 'Bisi Clothing logo',
   },
 }
 
