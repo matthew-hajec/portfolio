@@ -6,6 +6,7 @@ import Introduction from './sections/Introduction'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import Education from './sections/Education'
+import Experience from './sections/Experience'
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
               <Projects />
               <Skills />
               <Education />
+              <Experience />
               <Stats />
               
               
