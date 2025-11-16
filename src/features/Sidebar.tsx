@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "../components/Card";
 import Icon, { type IconName } from "../components/Icon";
 import Text from "../components/typography/Text";
@@ -58,11 +59,12 @@ export default function Sidebar() {
   return (
     <div className="lg:sticky lg:top-6  lg:h-[calc(100vh-3rem)]">
       <Card padded={false} additionalClasses="h-full p-6">
+        <Text elementType="p" className="uppercase tracking-[0.3em] text-sm mb-4">
+          Navigation
+        </Text>
+
         <aside className="w-full h-full flex flex-col gap-10">
           <section className="space-y-3">
-            <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
-              Navigation
-            </Text>
             <nav>
               <ul className="flex flex-col gap-4">
                 {primaryLinks.map((link) => (
