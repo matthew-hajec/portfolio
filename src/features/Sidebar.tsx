@@ -94,7 +94,7 @@ export default function Sidebar() {
             <div className="grid grid-cols-2 gap-3">
               {socialLinks.map((social) => (
                 <Card padded={false} key={social.href} additionalClasses="
-                  flex flex-col items-center justify-center aspect-square
+                  flex flex-col items-center justify-center h-25 lg:aspect-square
                   transition-transform duration-300 hover:-translate-y-1
                 ">
                   <a
