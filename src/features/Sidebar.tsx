@@ -1,33 +1,56 @@
 import Card from "../components/Card";
-import Icon from "../components/Icon";
+import Icon, { type IconName } from "../components/Icon";
 import Text from "../components/typography/Text";
 
-// External links should start with "http" to ensure the open in a new tab.
-function LinkItem({ href, children }: { href: string; children: React.ReactNode }) {
-  const isExternal = href.startsWith('http');
+type LinkItemProps = {
+  href: string;
+  label: string;
+};
+
+const primaryLinks: LinkItemProps[] = [
+  { href: "#introduction", label: "Introduction" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education" },
+  { href: "#experience", label: "Experience" },
+  { href: "#stats", label: "Statistics" },
+];
+
+const socialLinks: { href: string; icon: IconName; label: string }[] = [
+  { href: "https://github.com/matthew-hajec", icon: "github", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/matthew-hajec/", icon: "linkedin", label: "LinkedIn" },
+];
+
+function LinkItem({ href, label }: LinkItemProps) {
+  const isExternal = href.startsWith("http");
 
   return (
     <li>
-      <a 
-        href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
-        
-        <div className="
-          p-2
-          text-center
-          rounded-lg
-          border dark:border-gray-100/20 border-gray-900/20
-          cursor-pointer
-          hover:bg-gray-100/50 dark:hover:bg-gray-800/50
-          hover:scale-101
-          transition-all ease-in-out duration-200
-          shadow-md shadow-gray-500/10
-        ">
-          <Text elementType="p">
-            {children}
-          </Text>
-        </div>
+      <a
+        href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        className="group block"
+      >
+          <Card border={false} additionalClasses="
+            flex items-center justify-between
+            rounded-2xl px-4 py-3
+            backdrop-blur-xl
+            border border-white/40 dark:border-gray-700/30
+            group-hover:-translate-y-0.5 
+          ">
+            <Text elementType="p" className="text-sm font-medium tracking-wide text-gray-700 dark:text-gray-100">
+              {label}
+            </Text>
+            <span className="
+              h-1.5 w-1.5 rounded-full
+              bg-linear-to-r from-blue-400 via-purple-400 to-pink-400
+              opacity-70 group-hover:opacity-100
+              transition-opacity duration-300
+            " />
+          </Card>
       </a>
-    </li>  
+    </li>
   );
 }
 
@@ -35,40 +58,65 @@ export default function Sidebar() {
   return (
     <div className="lg:sticky lg:top-6  lg:h-[calc(100vh-3rem)]">
       <Card padded={false} additionalClasses="h-full p-6">
-        <aside className="w-full flex flex-col justify-between h-full">
-          <nav>
-            <ul className="flex flex-col gap-4">
-              <LinkItem href="#introduction">Introduction</LinkItem>
-              <LinkItem href="#projects">Projects</LinkItem>
-              <LinkItem href="#skills">Skills</LinkItem>
-              <LinkItem href="#education">Education</LinkItem>
-              <LinkItem href="#experience">Experience</LinkItem>
-              <LinkItem href="#stats">Statistics</LinkItem>
-            
-            </ul>
-          </nav>
-          <nav>
-            <ul className="
-              flex flex-col gap-4 flex-1
-              justify-end items-center">
-              <a 
-                href="https://github.com/matthew-hajec" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center mb-10"
-              >
-                <Icon iconName="github" className="h-20" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/matthew-hajec/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center mb-4"
-              >
-                <Icon iconName="linkedin" className="h-20" />
-              </a>
-            </ul>
-          </nav>
+        <aside className="w-full h-full flex flex-col gap-10">
+          <section className="space-y-3">
+            <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
+              Navigation
+            </Text>
+            <nav>
+              <ul className="flex flex-col gap-4">
+                {primaryLinks.map((link) => (
+                  <LinkItem key={link.href} {...link} />
+                ))}
+              </ul>
+            </nav>
+          </section>
+
+          <section className="space-y-4">
+            <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
+              Availability
+            </Text>
+            <Card padded={false} additionalClasses="p-2">
+              <Text elementType="p" className="text-sm text-gray-600 dark:text-gray-300">
+                Open for full-time roles and freelance/contract work. 
+              </Text>
+              <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1 text-xs font-semibold">
+                <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                Currently available
+              </div>
+            </Card>
+          </section>
+
+          <section className="mt-auto space-y-4">
+            <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
+              Connect
+            </Text>
+            <div className="grid grid-cols-2 gap-3">
+              {socialLinks.map((social) => (
+                <Card padded={false} key={social.href} additionalClasses="
+                  flex flex-col items-center justify-center aspect-square
+                ">
+                  <a
+                    key={social.href}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    // className="
+                    //   flex flex-col items-center justify-center gap-2
+                    //   rounded-2xl border border-white/40 dark:border-gray-700/40
+                    //   bg-white/50 dark:bg-gray-900/30 backdrop-blur-xl
+                    //   py-4 transition-transform duration-300 hover:-translate-y-1 hover:bg-white/70 dark:hover:bg-gray-900/50
+                    // "
+                  >
+                    <Icon iconName={social.icon} className="h-10" />
+                    <span className="text-xs font-semibold tracking-wide text-gray-600 dark:text-gray-300">
+                      {social.label}
+                    </span>
+                  </a>
+                </Card>
+              ))}
+            </div>
+          </section>
         </aside>
       </Card>
     </div>
