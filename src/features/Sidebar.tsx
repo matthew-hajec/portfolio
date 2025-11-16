@@ -21,7 +21,7 @@ const primaryLinks: LinkItemProps[] = [
 const socialLinks: { href: string; icon?: IconName; label: string }[] = [
   { href: "https://github.com/matthew-hajec", icon: "github", label: "GitHub" },
   { href: "https://www.linkedin.com/in/matthew-hajec/", icon: "linkedin", label: "LinkedIn" },
-  { href: "mailto:matt.hajec@pm.me", icon: undefined, label: "Email" },
+  { href: "mailto:matt.hajec@pm.me", icon: undefined, label: "matt.hajec@pm.me" },
 ];
 
 function LinkItem({ href, label }: LinkItemProps) {
@@ -59,7 +59,7 @@ function LinkItem({ href, label }: LinkItemProps) {
 
 function SidebarContent() {
   return (
-    <aside className="flex flex-1 flex-col gap-10">
+    <aside className="flex flex-1 flex-col gap-10 overflow-scroll">
       {/* Site Navigation Links */}
       <section className="space-y-3">
         <nav>
@@ -93,25 +93,29 @@ function SidebarContent() {
           Connect
         </Text>
         <div className="grid grid-cols-2 gap-3">
-          {socialLinks.filter(social => social.icon).map((social) => (
-            <Card padded={false} key={social.href} additionalClasses="
-              flex flex-col items-center justify-center h-25 lg:aspect-square
-              transition-transform duration-300 hover:-translate-y-1
-            ">
-              <a
-                key={social.href}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-1"
-              >
-                <Icon iconName={social.icon!} className="h-10" />
-                <span className="text-xs font-semibold tracking-wide text-gray-600 dark:text-gray-300">
-                  {social.label}
-                </span>
-              </a>
-            </Card>
-          ))}
+          {/* Social links with icons */}
+          {socialLinks.map((social) => {
+            return (
+              <Card padded={false} key={social.href} additionalClasses={`
+                flex flex-col items-center justify-center
+                transition-transform duration-300 hover:-translate-y-1
+                ${!social.icon ? 'col-span-2 p-3' : 'h-25 lg:aspect-square'}
+              `}>
+                <a
+                  key={social.href}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-1"
+                >
+                  {social.icon && <Icon iconName={social.icon} className="h-10" />}
+                  <span className="text-xs font-semibold tracking-wide text-gray-600 dark:text-gray-300">
+                    {social.label}
+                  </span>
+                </a>
+              </Card>
+            );
+          })}
         </div>
       </section>
     </aside>
