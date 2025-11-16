@@ -18,7 +18,7 @@ export default function Name() {
         </span>
 
         <div className="hidden sm:flex flex-col items-start text-xs tracking-[0.6em] uppercase text-gray-500 dark:text-gray-300">
-          <span className="opacity-90">Software Engineering</span>
+          <span className="mt-0.5 opacity-90">Software Engineering Portfolio</span>
         </div>
       </Card>
      </section>
