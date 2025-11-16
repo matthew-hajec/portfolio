@@ -95,13 +95,19 @@ export default function Sidebar() {
               {socialLinks.map((social) => (
                 <Card padded={false} key={social.href} additionalClasses="
                   flex flex-col items-center justify-center aspect-square
+                  transition-transform duration-300 hover:-translate-y-1
                 ">
                   <a
                     key={social.href}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center gap-2"
+                    // className="
+                    //   flex flex-col items-center justify-center gap-2
+                    //   rounded-2xl border border-white/40 dark:border-gray-700/40
+                    //   bg-white/50 dark:bg-gray-900/30 backdrop-blur-xl
+                    //   py-4 transition-transform duration-300 hover:-translate-y-1 hover:bg-white/70 dark:hover:bg-gray-900/50
+                    // "
                   >
                     <Icon iconName={social.icon} className="h-10" />
                     <span className="text-xs font-semibold tracking-wide text-gray-600 dark:text-gray-300">
