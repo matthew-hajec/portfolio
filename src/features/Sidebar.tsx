@@ -123,14 +123,37 @@ function SidebarContent() {
 }
 
 export default function Sidebar() {
+  const [isExpanded, setIsExpanded] = React.useState<boolean>(true);
+
   return (
     <div className="lg:sticky lg:top-6  lg:h-[calc(100vh-3rem)]">
       <Card padded={false} additionalClasses="h-full p-6 flex flex-col">
-        <Text elementType="p" className="uppercase tracking-[0.3em] text-sm mb-4">
-          Navigation
-        </Text>
+        <div 
+          onClick={() => setIsExpanded(prev => !prev)}
+          className="flex justify-between items-start cursor-pointer lg:cursor-auto select-none">
+          <Text elementType="p" className={`
+            text-2xl uppercase tracking-[0.2em] font-normal
+            ${isExpanded ? 'mb-6' : ''}
+            lg:tracking-[0.3em] lg:text-sm lg:mb-4
+          `}>
+            Navigation
+          </Text>
+          <button 
+            style={isExpanded ? {'rotate': '180deg'} : {'rotate': '0deg'}}
+            className="transition-transform mt-1 pointer-events-none lg:hidden"
+            aria-label={isExpanded ? "Collapse sidebar" : "Expand sidebar"}
+          >
+            <Icon iconName="caret" className="h-6"></Icon>
+          </button>
+        </div>
 
-        <SidebarContent />
+        <div
+          className={`
+            ${isExpanded ? 'block' : 'hidden lg:block'}
+          `}
+        >
+          <SidebarContent />
+        </div>
       </Card>
     </div>
   )
