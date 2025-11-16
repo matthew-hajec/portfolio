@@ -63,7 +63,8 @@ export default function Sidebar() {
           Navigation
         </Text>
 
-        <aside className="flex flex-col gap-10">
+        <aside className="flex flex-1 flex-col gap-10">
+          {/* Site Navigation Links */}
           <section className="space-y-3">
             <nav>
               <ul className="flex flex-col gap-4">
@@ -74,6 +75,7 @@ export default function Sidebar() {
             </nav>
           </section>
 
+          {/* Availability */}
           <section className="space-y-4">
             <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
               Availability
@@ -89,7 +91,8 @@ export default function Sidebar() {
             </Card>
           </section>
 
-          <section className="space-y-4">
+          {/* Social Links */}
+          <section className="mt-auto space-y-4">
             <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
               Connect
             </Text>
