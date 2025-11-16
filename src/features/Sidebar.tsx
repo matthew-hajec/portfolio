@@ -55,6 +55,66 @@ function LinkItem({ href, label }: LinkItemProps) {
   );
 }
 
+function SidebarContent() {
+  return (
+    <aside className="flex flex-1 flex-col gap-10">
+      {/* Site Navigation Links */}
+      <section className="space-y-3">
+        <nav>
+          <ul className="flex flex-col gap-4">
+            {primaryLinks.map((link) => (
+              <LinkItem key={link.href} {...link} />
+            ))}
+          </ul>
+        </nav>
+      </section>
+
+      {/* Availability */}
+      <section className="space-y-4">
+        <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
+          Availability
+        </Text>
+        <Card padded={false} additionalClasses="p-3">
+          <Text elementType="p" className="text-sm text-gray-600 dark:text-gray-300">
+            Open for full-time roles and freelance/contract work. 
+          </Text>
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1 text-xs font-semibold">
+            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            Currently available
+          </div>
+        </Card>
+      </section>
+
+      {/* Social Links */}
+      <section className="mt-auto space-y-4">
+        <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
+          Connect
+        </Text>
+        <div className="grid grid-cols-2 gap-3">
+          {socialLinks.map((social) => (
+            <Card padded={false} key={social.href} additionalClasses="
+              flex flex-col items-center justify-center h-25 lg:aspect-square
+              transition-transform duration-300 hover:-translate-y-1
+            ">
+              <a
+                key={social.href}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon iconName={social.icon} className="h-10" />
+                <span className="text-xs font-semibold tracking-wide text-gray-600 dark:text-gray-300">
+                  {social.label}
+                </span>
+              </a>
+            </Card>
+          ))}
+        </div>
+      </section>
+    </aside>
+  )
+}
+
 export default function Sidebar() {
   return (
     <div className="lg:sticky lg:top-6  lg:h-[calc(100vh-3rem)]">
@@ -63,61 +123,7 @@ export default function Sidebar() {
           Navigation
         </Text>
 
-        <aside className="flex flex-1 flex-col gap-10">
-          {/* Site Navigation Links */}
-          <section className="space-y-3">
-            <nav>
-              <ul className="flex flex-col gap-4">
-                {primaryLinks.map((link) => (
-                  <LinkItem key={link.href} {...link} />
-                ))}
-              </ul>
-            </nav>
-          </section>
-
-          {/* Availability */}
-          <section className="space-y-4">
-            <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
-              Availability
-            </Text>
-            <Card padded={false} additionalClasses="p-3">
-              <Text elementType="p" className="text-sm text-gray-600 dark:text-gray-300">
-                Open for full-time roles and freelance/contract work. 
-              </Text>
-              <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1 text-xs font-semibold">
-                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                Currently available
-              </div>
-            </Card>
-          </section>
-
-          {/* Social Links */}
-          <section className="mt-auto space-y-4">
-            <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
-              Connect
-            </Text>
-            <div className="grid grid-cols-2 gap-3">
-              {socialLinks.map((social) => (
-                <Card padded={false} key={social.href} additionalClasses="
-                  flex flex-col items-center justify-center h-25 lg:aspect-square
-                  transition-transform duration-300 hover:-translate-y-1
-                ">
-                  <a
-                    key={social.href}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon iconName={social.icon} className="h-10" />
-                    <span className="text-xs font-semibold tracking-wide text-gray-600 dark:text-gray-300">
-                      {social.label}
-                    </span>
-                  </a>
-                </Card>
-              ))}
-            </div>
-          </section>
-        </aside>
+        <SidebarContent />
       </Card>
     </div>
   )
