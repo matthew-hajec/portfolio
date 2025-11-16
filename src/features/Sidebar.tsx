@@ -1,0 +1,160 @@
+import React from "react";
+import Card from "../components/Card";
+import Icon, { type IconName } from "../components/Icon";
+import Text from "../components/typography/Text";
+
+type LinkItemProps = {
+  href: string;
+  label: string;
+};
+
+const primaryLinks: LinkItemProps[] = [
+  { href: "#introduction", label: "Introduction" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education" },
+  { href: "#experience", label: "Experience" },
+  { href: "#stats", label: "Statistics" },
+];
+
+
+const socialLinks: { href: string; icon?: IconName; label: string }[] = [
+  { href: "https://github.com/matthew-hajec", icon: "github", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/matthew-hajec/", icon: "linkedin", label: "LinkedIn" },
+  { href: "mailto:matt.hajec@pm.me", icon: undefined, label: "matt.hajec@pm.me" },
+];
+
+function LinkItem({ href, label }: LinkItemProps) {
+  const isExternal = href.startsWith("http");
+
+  return (
+    <li>
+      <a
+        href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        className="group block"
+      >
+          <Card border={false} additionalClasses="
+            flex items-center justify-between
+            rounded-2xl px-4 py-3
+            backdrop-blur-xl
+            border border-white/40 dark:border-gray-700/30
+            group-hover:-translate-y-0.5 
+          ">
+            <Text elementType="p" className="text-sm font-medium tracking-wide text-gray-700 dark:text-gray-100">
+              {label}
+            </Text>
+            <span className="
+              h-1.5 w-1.5 rounded-full
+              bg-linear-to-r from-blue-400 via-purple-400 to-pink-400
+              opacity-70 group-hover:opacity-100
+              transition-opacity duration-300
+            " />
+          </Card>
+      </a>
+    </li>
+  );
+}
+
+function SidebarContent() {
+  return (
+    <aside className="flex flex-col h-full gap-10">
+      {/* Site Navigation Links */}
+      <section className="space-y-3 h-2/5 overflow-scroll">
+        <nav>
+          <ul className="flex flex-col gap-4">
+            {primaryLinks.map((link) => (
+              <LinkItem key={link.href} {...link} />
+            ))}
+          </ul>
+        </nav>
+      </section>
+
+      {/* Availability */}
+      <section className="space-y-4">
+        <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
+          Availability
+        </Text>
+        <Card padded={false} additionalClasses="p-3">
+          <Text elementType="p" className="text-sm text-gray-600 dark:text-gray-300">
+            Open for full-time roles and freelance/contract work. 
+          </Text>
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1 text-xs font-semibold">
+            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            Currently available
+          </div>
+        </Card>
+      </section>
+
+      {/* Social Links */}
+      <section className="mt-auto space-y-4">
+        <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
+          Connect
+        </Text>
+        <div className="grid grid-cols-2 gap-3">
+          {/* Social links with icons */}
+          {socialLinks.map((social) => {
+            return (
+              <Card padded={false} key={social.href} additionalClasses={`
+                flex flex-col items-center justify-center
+                transition-transform duration-300 hover:-translate-y-1
+                ${!social.icon ? 'col-span-2 p-3' : 'h-25 lg:aspect-square'}
+              `}>
+                <a
+                  key={social.href}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-1"
+                >
+                  {social.icon && <Icon iconName={social.icon} className="h-10" />}
+                  <span className="text-xs font-semibold tracking-wide text-gray-600 dark:text-gray-300">
+                    {social.label}
+                  </span>
+                </a>
+              </Card>
+            );
+          })}
+        </div>
+      </section>
+    </aside>
+  )
+}
+
+export default function Sidebar() {
+  const [isExpanded, setIsExpanded] = React.useState<boolean>(true);
+
+  return (
+    <div className="lg:sticky lg:top-6  lg:h-[calc(100vh-3rem)]">
+      <Card padded={false} additionalClasses="h-full p-6 flex flex-col">
+        <div 
+          onClick={() => setIsExpanded(prev => !prev)}
+          className="flex justify-between items-start cursor-pointer lg:cursor-auto select-none">
+          <Text elementType="p" className={`
+            text-2xl uppercase tracking-[0.2em] font-normal
+            ${isExpanded ? 'mb-6' : ''}
+            lg:tracking-[0.3em] lg:text-sm lg:mb-4
+          `}>
+            Navigation
+          </Text>
+          <button 
+            style={isExpanded ? {'rotate': '180deg'} : {'rotate': '0deg'}}
+            className="transition-transform mt-1 pointer-events-none lg:hidden"
+            aria-label={isExpanded ? "Collapse sidebar" : "Expand sidebar"}
+          >
+            <Icon iconName="caret" className="h-6"></Icon>
+          </button>
+        </div>
+
+        <div
+          className={`
+            ${isExpanded ? 'block' : 'hidden lg:block'}
+          `}
+        >
+          <SidebarContent />
+        </div>
+      </Card>
+    </div>
+  )
+}
