@@ -63,7 +63,7 @@ export default function Sidebar() {
           Navigation
         </Text>
 
-        <aside className="w-full h-full flex flex-col gap-10">
+        <aside className="flex flex-col gap-10">
           <section className="space-y-3">
             <nav>
               <ul className="flex flex-col gap-4">
@@ -83,13 +83,13 @@ export default function Sidebar() {
                 Open for full-time roles and freelance/contract work. 
               </Text>
               <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1 text-xs font-semibold">
-                <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 Currently available
               </div>
             </Card>
           </section>
 
-          <section className="mt-auto space-y-4">
+          <section className="space-y-4">
             <Text elementType="p" className="uppercase tracking-[0.3em] text-sm">
               Connect
             </Text>
