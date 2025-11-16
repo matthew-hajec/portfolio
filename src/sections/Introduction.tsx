@@ -6,7 +6,7 @@ export default function Introduction() {
     <>
       {/* The id "introduction" is applied to the `body` element so it scrolls all the way to the top */}
     <Card>
-    <Text elementType="h2" className="text-3xl font-semibold mb-6">
+      <Text elementType="h2" className="text-2xl uppercase tracking-[0.2em] font-normal mb-6">
         Introduction
       </Text>
       <Card padded={false} additionalClasses="p-4">

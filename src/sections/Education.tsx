@@ -6,7 +6,7 @@ export default function Education() {
   return (
     <>
     <Card id="education">
-      <Text elementType="h2" className="text-3xl font-semibold mb-6">
+      <Text elementType="h2" className="text-2xl uppercase tracking-[0.2em] font-normal mb-6">
         Education
       </Text>
       <Card padded={false} additionalClasses="p-4">

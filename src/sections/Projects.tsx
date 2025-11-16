@@ -8,7 +8,7 @@ import todayIWillScreenshot from "../assets/todayiwill.png";
 export default function Projects() {
   return (
     <Card id="projects">
-      <Text elementType="h2" className="text-3xl font-semibold mb-6">
+      <Text elementType="h2" className="text-2xl uppercase tracking-[0.2em] font-normal mb-6">
         Projects
       </Text>
 

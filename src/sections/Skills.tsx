@@ -21,7 +21,7 @@ export default function Skills() {
   return (
     <>
     <Card id="skills">
-      <Text elementType="h2" className="text-3xl font-semibold mb-6">
+      <Text elementType="h2" className="text-2xl uppercase tracking-[0.2em] font-normal mb-6">
         Skills
       </Text>
       <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
