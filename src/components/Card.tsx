@@ -25,7 +25,7 @@ export default function Card({ children, hoverEffect=true, padded=true, border=t
         ` : ''}
       rounded-xl shadow-lg
       shadow-white/12 dark:shadow-black/20
-      ${border ? 'border-t-4 border-s-4 border-b border-l border-white/1 dark:border-t-6 dark:border-s-6 dark:border-gray-800/7' : ''}
+      ${border ? 'border-t-4 border-s-4 border-b border-l border-white/1 dark:border-t-4 dark:border-s-4 dark:border-gray-800/7' : ''}
       bg-white/40 dark:bg-gray-800/60
       backdrop-blur-xl
       overflow-hidden
@@ -34,7 +34,7 @@ export default function Card({ children, hoverEffect=true, padded=true, border=t
     {...props}>
       <MouseFollowingDiv parentRef={parentRef} className="
         w-700 h-700
-        bg-[radial-gradient(circle,rgba(0,0,0,0.05)_0%,rgba(0,0,0,0)_60%)]
+        bg-[radial-gradient(circle,rgba(0,0,0,0.1)_0%,rgba(0,0,0,0)_60%)]
         rounded-full
         mix-blend-multiply
         blur-2xl
