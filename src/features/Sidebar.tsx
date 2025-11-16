@@ -58,7 +58,7 @@ function LinkItem({ href, label }: LinkItemProps) {
 export default function Sidebar() {
   return (
     <div className="lg:sticky lg:top-6  lg:h-[calc(100vh-3rem)]">
-      <Card padded={false} additionalClasses="h-full p-6">
+      <Card padded={false} additionalClasses="h-full p-6 flex flex-col">
         <Text elementType="p" className="uppercase tracking-[0.3em] text-sm mb-4">
           Navigation
         </Text>
