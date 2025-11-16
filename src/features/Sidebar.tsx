@@ -59,9 +59,9 @@ function LinkItem({ href, label }: LinkItemProps) {
 
 function SidebarContent() {
   return (
-    <aside className="flex flex-col gap-10 overflow-scroll">
+    <aside className="flex flex-col h-full gap-10">
       {/* Site Navigation Links */}
-      <section className="space-y-3">
+      <section className="space-y-3 h-2/5 overflow-scroll">
         <nav>
           <ul className="flex flex-col gap-4">
             {primaryLinks.map((link) => (
