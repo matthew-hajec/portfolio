@@ -25,7 +25,7 @@ export default function Card({ children, hoverEffect=true, padded=true, addition
       rounded-xl shadow-lg
       shadow-white/12 dark:shadow-black/20
       border-t-4 border-s-4 border-b border-l border-white/1 dark:border-t-6 dark:border-s-6 dark:border-gray-800/7
-      bg-white/20 dark:bg-gray-800/40
+      bg-white/40 dark:bg-gray-800/60
       backdrop-blur-xl
       overflow-hidden
       ${additionalClasses}
