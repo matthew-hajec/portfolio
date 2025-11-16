@@ -1,11 +1,13 @@
 import openInNewWhite from '../assets/open-in-new-white.svg'
 import openInNewBlack from '../assets/open-in-new.svg'
+import arrowDownWhite from '../assets/arrow-down-white.svg'
+import arrowDownBlack from '../assets/arrow-down.svg'
 import githubWhite from '../assets/github-mark-white.svg'
 import githubBlack from '../assets/github-mark.svg'
 import mga from '../assets/mga.png'
 import bisi from '../assets/bisi.webp'
 
-type GenericIcon = 'open-as'
+type GenericIcon = 'open-as' | 'caret'
 type WebsiteIcon = 'github' | 'linkedin'
 type DevIcon = 'html5' | 'css3' | 'javascript' | 'typescript' | 'nodejs' | 'react' | 'tailwindcss' | 'phoenix' | 'elixir' | 'sql' | 'git' | 'docker'
 type PersonalIcon = 'mga' | 'bisi'
@@ -21,6 +23,11 @@ const iconMap: Record<IconName, { light: string; dark: string; alt: string }> = 
     light: openInNewBlack,
     dark: openInNewWhite,
     alt: 'Open in new tab icon',
+  },
+  'caret': {
+    light: arrowDownBlack,
+    dark: arrowDownWhite,
+    alt: 'Caret icon',
   },
   'github': {
     light: githubBlack,
