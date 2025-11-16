@@ -45,15 +45,14 @@ function App() {
             </div>
           </header>
 
-          <div className='grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-4 gap-x-8 gap-y-10'>
+          <div className='grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10'>
             <div className="col-span-1">
               <Sidebar />
             </div>
 
             <main className="
               col-span-1
-              lg:col-span-4
-              xl:col-span-3
+              lg:col-span-3
               grid grid-cols-1 gap-y-10
             ">
               <Introduction />
