@@ -8,5 +8,5 @@ type TextProps = {
 
 export default function Text({ children, elementType, className}: TextProps) {
   const Component = elementType || "p";
-  return <Component className={`font-['Open_Sans'] text-gray-900/80 dark:text-gray-100/80 ${className}`}>{children}</Component>;
+  return <Component className={`font-['Open_Sans'] text-gray-600 dark:text-gray-400 ${className}`}>{children}</Component>;
 }
