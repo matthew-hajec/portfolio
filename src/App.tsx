@@ -40,7 +40,7 @@ function App() {
         <div className="max-w-7xl mx-auto pt-12 pb-6 px-6">
           <header className='relative'>
             <Name />
-            <div className="absolute top-6 end-0">
+            <div className="absolute top-6 end-0 hidden">
               <ThemeToggle />
             </div>
           </header>
