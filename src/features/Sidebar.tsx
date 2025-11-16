@@ -17,9 +17,11 @@ const primaryLinks: LinkItemProps[] = [
   { href: "#stats", label: "Statistics" },
 ];
 
-const socialLinks: { href: string; icon: IconName; label: string }[] = [
+
+const socialLinks: { href: string; icon?: IconName; label: string }[] = [
   { href: "https://github.com/matthew-hajec", icon: "github", label: "GitHub" },
   { href: "https://www.linkedin.com/in/matthew-hajec/", icon: "linkedin", label: "LinkedIn" },
+  { href: "mailto:matt.hajec@pm.me", icon: undefined, label: "Email" },
 ];
 
 function LinkItem({ href, label }: LinkItemProps) {
@@ -91,7 +93,7 @@ function SidebarContent() {
           Connect
         </Text>
         <div className="grid grid-cols-2 gap-3">
-          {socialLinks.map((social) => (
+          {socialLinks.filter(social => social.icon).map((social) => (
             <Card padded={false} key={social.href} additionalClasses="
               flex flex-col items-center justify-center h-25 lg:aspect-square
               transition-transform duration-300 hover:-translate-y-1
@@ -101,8 +103,9 @@ function SidebarContent() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1"
               >
-                <Icon iconName={social.icon} className="h-10" />
+                <Icon iconName={social.icon!} className="h-10" />
                 <span className="text-xs font-semibold tracking-wide text-gray-600 dark:text-gray-300">
                   {social.label}
                 </span>
